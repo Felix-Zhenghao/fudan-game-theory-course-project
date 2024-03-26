@@ -1,6 +1,8 @@
 ############################################################################################################
 # TO DO: 1. Test with massive data.
 #        2. Calculate by hand whether the results are correct.
+#        3. Improve the robustness of the user_input function.
+#        4. Implement the 'learning_player' code to study the effect of multi-agent learning in the game.
 ############################################################################################################
 
 
