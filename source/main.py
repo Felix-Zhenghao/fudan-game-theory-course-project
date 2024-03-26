@@ -9,7 +9,7 @@
 from __future__ import annotations
 
 import numpy as np
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 # Helper function(s)
 
@@ -60,12 +60,14 @@ class OneRoundGame:
                  num_player: int = 3, 
                  collaboration: bool = False, 
                  demand_shock: bool = False,
-                 player_name: list = None
+                 player_name: list = None,
+                 total_num_people: int = 2000
                  ):
         
         self.num_player = num_player
         self.collaboration = collaboration
         self.demand_shock = demand_shock
+        self.total_num_people = total_num_people
 
         # Default player names: ["player_1","player_2",...]
         if player_name is None:
@@ -84,7 +86,8 @@ class OneRoundGame:
     
     def calculateTotalDemand(self, 
                              price: np.ndarray, 
-                             enable_shock: bool = False
+                             total_num_people: int = None,
+                             enable_shock: bool = False,
                              ):
         """
         Calculate total demand according to the price offer.
@@ -95,14 +98,17 @@ class OneRoundGame:
 
         # assert len(price)==self.num_player , "The number of price offer does not match number of players"
 
+        if total_num_people is None:
+            total_num_people = self.total_num_people
+
         market_share = self.calculateMarketShare(price)
         weighted_price = np.vdot(market_share,price)
 
-        total_demand = 2000-20*weighted_price # It will return datatype numpy.int64 in default
+        total_demand = total_num_people - total_num_people*weighted_price/100.0 # It will return datatype numpy.float64 in default
         if self.demand_shock & enable_shock:
             total_demand += np.random.uniform(low = 0.0,high=100.0) # The demand shock is sampled from U(0,100)
 
-        return total_demand
+        return np.rint(total_demand) # Round the demand to the nearest integer.
 
 
     def allocateDemand(self, total_demand, price):
@@ -132,7 +138,6 @@ class OneRoundGame:
         sales = np.minimum(max_sales,demand)
 
         check = np.ones(self.num_player) # All ones array
-        chack_ = np.sum(check * demand_unsatisfaction) != self.num_player
         while (np.sum(check * demand_unsatisfaction) != self.num_player) & (np.sum(check * demand_unsatisfaction) != 0):
         # If some demand is satisfied and some is not, do:
             
@@ -147,8 +152,9 @@ class OneRoundGame:
             tmp_sales = get_element(target_list=sales,index_list=index)
 
             # One round of unsatisfied need allocation
-            total_demand = np.maximum(self.calculateTotalDemand(price=tmp_price) - np.sum(sales), 0.0)
-            if np.rint(total_demand) == 0:
+            left_people = self.total_num_people - np.sum(sales)
+            total_demand = np.maximum(self.calculateTotalDemand(price=tmp_price,total_num_people=left_people), 0.0)
+            if total_demand == 0:
                 return sales # The market has no need given the left producers in the market.
             demand =  self.allocateDemand(total_demand=total_demand,price=tmp_price)
 
