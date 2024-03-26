@@ -1,0 +1,140 @@
+
+
+#########################################
+## ROUND 1 of the game starts
+#########################################
+
+===============================
+There are  3  players in this round.
+Their names: ['Adam', 'Felix', 'Q��']
+Their production levels: {'Adam': 500.0, 'Felix': 550.0, 'Q��': 500.0}
+Their price offers:  {'Adam': 50.0, 'Felix': 55.0, 'Q��': 35.0}
+===============================
+
+
+total_demand:1251.9377993532225
+
+total_demand:243.2063369878931
+
+#####Updated inventory after this period#####
+{'Adam': 0.0, 'Felix': 0.0, 'Q��': 0.0}
+
+#####The total cost (w/ inventory) for all players this period#####
+{'Adam': 41021.35088, 'Felix': 45998.48596799999, 'Q��': 41021.35088}
+
+#####The average cost for all players this period#####
+{'Adam': 82.04270176, 'Felix': 83.63361085090908, 'Q��': 82.04270176}
+
+#####The marginal cost for all players#####
+{'Adam': 97.04270176, 'Felix': 102.04270176, 'Q��': 97.04270176}
+
+#####The updated cumulative production level for all players after this period#####
+{'Adam': 532.0, 'Felix': 582.0, 'Q��': 532.0}
+
+#####The inventory cost for all players this period#####
+{'Adam': 360.0, 'Felix': 800.0, 'Q��': 0.0}
+
+#####The total cost (w inventory) for all players this period#####
+{'Adam': 41381.35088, 'Felix': 46798.48596799999, 'Q��': 41021.35088}
+
+#####The total profit for all players this period#####
+{'Adam': -25381.350879999998, 'Felix': -38548.48596799999, 'Q��': -23521.350879999998}
+
+#####The cumulative profit for all players after period#####
+{'Adam': -25381.350879999998, 'Felix': -38548.48596799999, 'Q��': -23521.350879999998}
+
+
+
+#########################################
+## ROUND 2 of the game starts
+#########################################
+
+===============================
+There are  3  players in this round.
+Their names: ['Adam', 'Felix', 'Q��']
+Their production levels: {'Adam': 50.0, 'Felix': 100.0, 'Q��': 80.0}
+Their price offers:  {'Adam': 60.0, 'Felix': 70.0, 'Q��': 75.0}
+===============================
+
+
+total_demand:772.4333452500432
+
+total_demand:99.0
+
+#####Updated inventory after this period#####
+{'Adam': 180.0, 'Felix': 400.0, 'Q��': 0.0}
+
+#####The total cost (w/ inventory) for all players this period#####
+{'Adam': 6400.953890310012, 'Felix': 8002.513562879685, 'Q��': 7361.5262244960195}
+
+#####The average cost for all players this period#####
+{'Adam': 128.01907780620024, 'Felix': 80.02513562879685, 'Q��': 92.01907780620024}
+
+#####The marginal cost for all players#####
+{'Adam': 30.519077806200237, 'Felix': 35.025135628796846, 'Q��': 33.51907780620024}
+
+#####The updated cumulative production level for all players after this period#####
+{'Adam': 582.0, 'Felix': 682.0, 'Q��': 612.0}
+
+#####The inventory cost for all players this period#####
+{'Adam': 0.0, 'Felix': 420.0, 'Q��': 0.0}
+
+#####The total cost (w inventory) for all players this period#####
+{'Adam': 6400.953890310012, 'Felix': 8422.513562879685, 'Q��': 7361.5262244960195}
+
+#####The total profit for all players this period#####
+{'Adam': 7399.046109689988, 'Felix': 11877.486437120315, 'Q��': -1361.5262244960195}
+
+#####The cumulative profit for all players after period#####
+{'Adam': -17982.30477031001, 'Felix': -26670.99953087968, 'Q��': -24882.877104496016}
+
+
+
+#########################################
+## ROUND 3 of the game starts
+#########################################
+
+===============================
+There are  3  players in this round.
+Their names: ['Adam', 'Felix', 'Q��']
+Their production levels: {'Adam': 500.0, 'Felix': 3000.0, 'Q��': 200.0}
+Their price offers:  {'Adam': 50.0, 'Felix': 20.0, 'Q��': 35.0}
+===============================
+
+
+#####Your sales performance of this period#####
+{'Adam': 9.0, 'Felix': 1491.0, 'Q��': 114.0}
+
+#####The market share of each player in this period#####
+{'Adam': 0.0055762081784386614, 'Felix': 0.9237918215613383, 'Q��': 0.07063197026022305}
+
+#####Updated inventory after this period#####
+{'Adam': 0.0, 'Felix': 210.0, 'Q��': 0.0}
+
+#####The total cost (w/ inventory) for all players this period#####
+{'Adam': 30012.567814398422, 'Felix': 527529.393516777, 'Q��': 11950.587655046093}
+
+#####The average cost for all players this period#####
+{'Adam': 60.025135628796846, 'Felix': 175.84313117225898, 'Q��': 59.75293827523046}
+
+#####The marginal cost for all players#####
+{'Adam': 75.02513562879685, 'Felix': 324.1764645055923, 'Q��': 44.75293827523046}
+
+#####The updated cumulative production level for all players after this period#####
+{'Adam': 1082.0, 'Felix': 3682.0, 'Q��': 812.0}
+
+#####The inventory cost for all players this period#####
+{'Adam': 982.0, 'Felix': 3438.0, 'Q��': 172.0}
+
+#####The total cost (w inventory) for all players this period#####
+{'Adam': 30994.567814398422, 'Felix': 530967.393516777, 'Q��': 12122.587655046093}
+
+#####The total profit for all players this period#####
+{'Adam': -30544.567814398422, 'Felix': -501147.39351677697, 'Q��': -8132.587655046093}
+
+#####The cumulative profit for all players after period#####
+{'Adam': -48526.87258470843, 'Felix': -527818.3930476566, 'Q��': -33015.46475954211}
+
+
+
+
